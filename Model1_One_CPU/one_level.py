@@ -6,7 +6,7 @@ from caches import *
 
 
 
-#creation des options qu'on peut recuperer a partir du terminal quand on tappe --help
+#Creation of options that can be retrieved from the terminal when typing --help.
 import argparse
 
 parser = argparse.ArgumentParser(description='A simple system with 2-level cache.')
@@ -23,15 +23,14 @@ options = parser.parse_args()
 
 
 
-#Création de notre objet global
+#Creation of the global system 
 system = System()
-
 #------------------------------------------------#
 
-#Définition de la clock
+#Definition of the clock
 system.clk_domain = SrcClockDomain()
 system.clk_domain.clock = '1GHz'
-#Type de voltage utilisé
+#Type of voltage used
 system.clk_domain.voltage_domain = VoltageDomain()
 
 
@@ -63,7 +62,7 @@ system.cpu = ArmO3CPU()
 system.membus = SystemXBar()
 
 #------------------------------------------------#
-#Création d'un controleur d'interruptions
+#Creation of the interrupt Controller
 system.cpu.createInterruptController()
 # connexion of the ports
 
@@ -113,11 +112,9 @@ print("Setting up the instruction")
 
 
 
-#Indication à gem5 de l'endriot où trouver la commande à exécuter
-binary = 'tests/test-progs/hello/bin/x86/linux/hello'
-binary_test_a3='cpu_tests/benchmarks/bin/arm/PropreFichier/test_a_3'
-binary_flushandreloadtest ='cpu_tests/benchmarks/bin/arm/PropreFichier/flushandreload'
-binary_stolenkey ='cpu_tests/benchmarks/bin/arm/PropreFichier/stolenkey'
+#Instructing gem5 about the location to find the command for execution.
+binary_flushandreloadtest ='.../FlushAndReload_Basic_Attack'
+binary_stolenkey ='.../RealSituation'
 
 
 # for gem5 V21 and beyond
