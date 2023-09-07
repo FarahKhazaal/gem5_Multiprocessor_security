@@ -1,4 +1,4 @@
-# System-Level Design for Assessing Shared Resources Effects on Multiprocessor Systems Security
+# System-Level Design for Assessing Shared Resources Effects on Multiprocessor Systems Security using GEM5
 
 Welcome to the project repository for "System-Level Design for Assessing Shared Resources Effects on Multiprocessor Systems Security." This repository contains the resources and documentation related to the study of processor architecture vulnerabilities using the gem5 software.
 
